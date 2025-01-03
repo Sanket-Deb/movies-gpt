@@ -1,5 +1,7 @@
 # NETFLIX_GPT
 
+_STEPS FOLLOWED LOG_
+
 - Create React App
 - Configured TailwindCss
 - Header
@@ -13,6 +15,13 @@
 - Create SignUp User Account
 - Implement Sign in user API
 - Created Redux Store with userSlice
+- Implementation of Sign Out
+- Update Profile
+- Fetch from TMDB movies
+- BugFix: Sign up user displayName
+- BugFix: If the yse is not logged in redirect browse to login page and vice versa
+- Unsubscribed to the onAuthStateChange callback
+- Add hardcoded values to constants.js
 
 # Features
 
