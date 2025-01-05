@@ -22,6 +22,8 @@ _STEPS FOLLOWED LOG_
 - BugFix: If the yse is not logged in redirect browse to login page and vice versa
 - Unsubscribed to the onAuthStateChange callback
 - Add hardcoded values to constants.js
+- Register TMDB API and create an app and get access token
+- Get data from TMDB now playing movies list API
 
 # Features
 
