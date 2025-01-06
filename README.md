@@ -24,6 +24,16 @@ _STEPS FOLLOWED LOG_
 - Add hardcoded values to constants.js
 - Register TMDB API and create an app and get access token
 - Get data from TMDB now playing movies list API
+- Custom hook for Now Playing Movies
+- Create a movieSlice
+- Update store with movie data
+- Fetch Data for Trailer Video
+- Update Store with Trailer Video Data
+- Embedded the Youtube video to autoplay
+- Built the movie list
+- Build movie card
+- Added TMBD movie poster image CDN URL
+- Added usePopularMovies custom hooks and more hooks
 
 # Features
 
