@@ -34,6 +34,7 @@ _STEPS FOLLOWED LOG_
 - Build movie card
 - Added TMBD movie poster image CDN URL
 - Added usePopularMovies custom hooks and more hooks
+- GPT search feature
 
 # Features
 
