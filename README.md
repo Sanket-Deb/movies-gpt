@@ -35,6 +35,7 @@ _STEPS FOLLOWED LOG_
 - Added TMBD movie poster image CDN URL
 - Added usePopularMovies custom hooks and more hooks
 - GPT search feature
+- Multi-language feature (trial)
 
 # Features
 
