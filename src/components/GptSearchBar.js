@@ -1,9 +1,11 @@
 import React, { useRef } from "react";
 import lang from "../utils/languageConstants";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { API_OPTIONS, GEMINI_KEY } from "../utils/constants";
+import { addGptMoviesResult } from "../utils/gptSlice";
 
 const GptSearchBar = () => {
+  const dispatch = useDispatch();
   const langKey = useSelector((store) => store.config.lang);
 
   const searchText = useRef(null);
@@ -31,21 +33,31 @@ const GptSearchBar = () => {
     const gptQuery =
       "Act as a Movie Recommendation system and suggest some movies for the query" +
       searchText.current.value +
-      ". Only give me names of 5 movies, comma separated like the given result ahead. Example Result: Avatar, Sholay, Bahubali, Singham, Once upon a time in mumbai";
+      ". Only give me names of 5 movies, comma separated like the given result ahead. Example Result: Sholay, Avatar, Once upon a time in mumbai, Singham, Bahubali";
 
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" }); //15 RPM (requests per minute);1,500 RPD (requests per day)
     const gptResults = await model.generateContent(gptQuery);
-    //result of 5 movies
-    const movieResults = gptResults.response.text();
+    //resoonse of gemini- 5 movies
+    const movieResponse = gptResults.response.text();
     //console.log(gptResults.response);
-    //console.log(movieResults);
+    console.log(movieResponse);
 
     // result of 5 movies in an array
-    const gptMovies = movieResults.split(",").map((movie) => movie.trim());
-    console.log(gptMovies);
+    const gptMovies = movieResponse.split(",").map((movie) => movie.trim());
+    //console.log(gptMovies);
 
     //For each movie, search TMDB API
-    const data = gptMovies.map((movie) => searchMovieTMDB(movie)); // [Promise, Promise, Promise, Promise, Promise]
+    const promiseArray = gptMovies.map((movie) => searchMovieTMDB(movie)); // [Promise, Promise, Promise, Promise, Promise]
+
+    const tmdbResults = await Promise.all(promiseArray);
+    console.log(tmdbResults);
+
+    dispatch(
+      addGptMoviesResult({
+        movieNames: gptMovies,
+        movieResults: tmdbResults,
+      })
+    );
   };
 
   return (
