@@ -31,9 +31,9 @@ const GptSearchBar = () => {
     const genAI = new GoogleGenerativeAI(GEMINI_KEY);
 
     const gptQuery =
-      "Act as a Movie Recommendation system and suggest some movies for the query" +
+      "Act as a Movie Recommendation system and suggest some movies for the query-" +
       searchText.current.value +
-      ". Only give me names of 5 movies, comma separated like the given result ahead. Example Result: Sholay, Avatar, Once upon a time in mumbai, Singham, Bahubali";
+      ". Only give me names of 5 movies, comma separated like the given result ahead. Example Result: Sholay, Avatar, Once upon a time in mumbai, Singham, Bahubali. (IMP NOTE: Do not add any disclaimers unless you donot have anything to present at all)";
 
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" }); //15 RPM (requests per minute);1,500 RPD (requests per day)
     const gptResults = await model.generateContent(gptQuery);
