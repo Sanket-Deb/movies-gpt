@@ -32,7 +32,7 @@ const Browse = () => {
               - VideoTitle
             SecondaryContainer
              - MovieList * n
-              - cards * n
+              -MovieCards * n
         */}
     </div>
   );
