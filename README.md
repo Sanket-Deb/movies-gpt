@@ -52,3 +52,4 @@ _STEPS FOLLOWED LOG_
 - NetFlixGPT
   - Search Bar
   - Movie Suggestions
+- Redirect to VPN
