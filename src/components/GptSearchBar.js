@@ -37,7 +37,7 @@ const GptSearchBar = () => {
 
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" }); //15 RPM (requests per minute);1,500 RPD (requests per day)
     const gptResults = await model.generateContent(gptQuery);
-    //resoonse of gemini- 5 movies
+    //response of gemini- 5 movies
     const movieResponse = gptResults.response.text();
     //console.log(gptResults.response);
     console.log(movieResponse);
