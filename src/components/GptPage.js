@@ -5,13 +5,15 @@ import { POSTER } from "../utils/constants";
 
 const GptPage = () => {
   return (
-    <div>
+    <>
       <div className="fixed -z-10">
         <img src={POSTER} alt="Poster"></img>
       </div>
-      <GptSearchBar />
-      <GptMovieSuggestions />
-    </div>
+      <div className="pt-[30%]">
+        <GptSearchBar />
+        <GptMovieSuggestions />
+      </div>
+    </>
   );
 };
 
