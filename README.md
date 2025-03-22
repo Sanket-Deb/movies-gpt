@@ -36,6 +36,8 @@ _STEPS FOLLOWED LOG_
 - Added usePopularMovies custom hooks and more hooks
 - GPT search feature
 - Multi-language feature with hindi, english and spanish prompt search box(trial)
+- Website responsiveness
+- VPN Handleing
 
 # Features
 
