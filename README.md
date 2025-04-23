@@ -37,7 +37,6 @@ _STEPS FOLLOWED LOG_
 - GPT search feature
 - Multi-language feature with hindi, english and spanish prompt search box(trial)
 - Website responsiveness
-- VPN Handleing
 
 # Features
 

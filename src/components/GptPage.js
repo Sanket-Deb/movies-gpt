@@ -7,9 +7,9 @@ const GptPage = () => {
   return (
     <>
       <div className="fixed -z-10">
-        <img src={POSTER} alt="Poster"></img>
+        <img className="h-screen object-cover" src={POSTER} alt="Poster"></img>
       </div>
-      <div className="pt-[30%]">
+      <div className="">
         <GptSearchBar />
         <GptMovieSuggestions />
       </div>
