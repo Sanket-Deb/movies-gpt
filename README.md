@@ -36,7 +36,13 @@ _STEPS FOLLOWED LOG_
 - Added usePopularMovies custom hooks and more hooks
 - GPT search feature
 - Multi-language feature with hindi, english and spanish prompt search box(trial)
-- Website responsiveness
+- Get Gemini API key
+- Get Search API call
+- fetched GptMovieSuggestions (gemini responses) from TMDB
+- create gptSlice and added data
+- Reused MovieList component to make the movie suggestion container
+- setup .env file
+- Made the site responsive
 
 # Features
 
